@@ -10,7 +10,7 @@ Solo se deben implementar las rutas especificadas a continuación:
 
 - ### Books
 
-| Ruta | Método | Descrpción |
+| Ruta | Método | Descripción |
 | - | - | - |
 | / | GET | Listar libros |
 | /books | POST | Nuevo libro\* (id auto-generado, name, author) |
@@ -18,7 +18,7 @@ Solo se deben implementar las rutas especificadas a continuación:
 
 - ### Users
 
-| Ruta | Método | Descrpción |
+| Ruta | Método | Descripción |
 | - | - | - |
 | /users | POST | Nuevo usuario (id auto-generado, name, username, password-hash) |
 | /users/login | POST | Login usuario |
