@@ -1,10 +1,11 @@
+// MODULOS DE TERCEROS
 // imporatar rotating-file-stream - rotar archivos (logs)
 const rfs = require("rotating-file-stream");
 
 // stream para logger propio - aplicacion
 const applicationLoggerStream = rfs.createStream("audits.log", {
     path: "./logs",
-    size: "10M",
+    //size: "10M",
     interval: "1d",
     compress: "gzip"
 });
