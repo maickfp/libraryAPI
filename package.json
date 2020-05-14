@@ -19,5 +19,14 @@
   "bugs": {
     "url": "https://github.com/maickfp/libraryAPI/issues"
   },
-  "homepage": "https://github.com/maickfp/libraryAPI#readme"
+  "homepage": "https://github.com/maickfp/libraryAPI#readme",
+  "dependencies": {
+    "bcrypt": "^4.0.1",
+    "express": "^4.17.1",
+    "fs": "0.0.1-security",
+    "jsonwebtoken": "^8.5.1",
+    "morgan": "^1.10.0",
+    "nocache": "^2.1.0",
+    "rotating-file-stream": "^2.1.0"
+  }
 }
