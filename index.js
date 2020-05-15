@@ -6,9 +6,9 @@ const nocache = require('nocache');
 
 // MODULOS PROPIOS
 // importar configuracion
-const config = require('./own_modules/config');
+const config = require('./config');
 // importar logger propio
-const log = require('./own_modules/log');
+const log = require('./utils/log');
 // importar api
 const api = require('./api');
 
