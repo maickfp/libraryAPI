@@ -6,9 +6,9 @@ const {v4:uuidv4} = require('uuid');
 
 //MODULOS PROPIOS
 // logger
-const log = require('../../own_modules/log');
+const log = require('./../../utils/log');
 // seguridad
-const security = require('../../own_modules/security');
+const security = require('./../../utils/security');
 
 // Inicializadores
 const router = express.Router();
