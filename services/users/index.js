@@ -118,7 +118,7 @@ const login = (
     }
 
     return {
-        est: 2,
+        est: 1,
         msg: `Bienvenid@ ${loginUser.name}`,
         token: security.generateToken(loginUser)
     };
