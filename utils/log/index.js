@@ -5,9 +5,9 @@ const rfs = require("rotating-file-stream");
 // stream para logger propio - aplicacion
 const applicationLoggerStream = rfs.createStream("audits.log", {
     path: "./logs",
-    //size: "10M",
-    interval: "1d",
-    compress: "gzip"
+    initialRotation: true,
+    size: "10M",
+    interval: "1d"
 });
 
 const log = {

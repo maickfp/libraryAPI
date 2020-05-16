@@ -5,6 +5,8 @@ const express = require('express');
 const nocache = require('nocache');
 
 // MODULOS PROPIOS
+// importar beforeStart
+const beforeStart = require('./config/beforeStart');
 // importar configuracion
 const config = require('./config');
 // importar logger propio
@@ -25,5 +27,6 @@ app.use('/api', api);
 
 // Iniciar servidor
 app.listen(config.port, ()=>{
+    beforeStart();
     log.info(`Servidio iniciado en puerto ${config.port}. Acceder a ruta http://localhost${config.port==80?'':`:${config.port}`}/api`);
 });

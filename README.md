@@ -29,3 +29,11 @@ Solo se deben implementar las rutas especificadas a continuación:
 
 - Se deben registrar todas las acciones del usuario autenticado en un archivo llamado audits.log con el formato (date, username, path)
 - Se deben registrar únicamente los accesos a las rutas de la entidad Books con el formato predeterminado de la librería Morgan en un archivo llamado access.log.
+
+## Rutas adicionales propias:
+
+- ### Users
+
+| Ruta | Método | Descrpción |
+| - | - | - |
+| /users | GET | Listar usuarios (id, name, username) |
