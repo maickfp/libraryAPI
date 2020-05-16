@@ -4,9 +4,9 @@ const express = require('express');
 
 //MODULOS PROPIOS
 // logger
-const log = require('./../../utils/log');
+const log = require('./../../../utils/log');
 // servicio users
-const userService = require('./../../services/users');
+const userService = require('./../../../services/users');
 
 // Inicializadores
 const router = express.Router();

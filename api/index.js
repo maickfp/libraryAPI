@@ -6,7 +6,7 @@ const express = require('express');
 const router = express.Router();
 
 // APIs
-const users = require('./users');
+const users = require('./routes/users');
 
 // Rutas
 router.use('/users', users);
