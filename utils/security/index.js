@@ -31,12 +31,13 @@ const security = {
     
         return token;
     },
-    verifyToken: (token) => { 
+    verifyToken: (token, req) => {
         return jwt.verify(token, config.tokenKey, (err, user) => {
             if(err){
                 log.warn(`Token ${token} inválido. Error:${err.name}`);
                 return false;
             }
+            req.user = user;
             return true;
         });
     }

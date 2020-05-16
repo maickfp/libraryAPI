@@ -23,7 +23,7 @@ Solo se deben implementar las rutas especificadas a continuación:
 | /users | POST | Nuevo usuario (id auto-generado, name, username, password-hash) |
 | /users/login | POST | Login usuario |
 
-\*Indica si la ruta es privada
+\*Indica si la ruta es privada (Header: x-auth)
 
 ## Adicionalmente:
 
