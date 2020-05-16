@@ -7,6 +7,15 @@ const {v4:uuidv4} = require('uuid');
 const security = require('./../../utils/security');
 
 // Variables
+/**
+ * Estructura:
+ * {
+ *  id -> text
+ *  username -> text
+ *  name -> text
+ *  password -> text
+ * }
+ */
 let users = [];
 
 // Funciones / Procedimientos
