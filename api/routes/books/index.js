@@ -11,10 +11,13 @@ const bookService = require('./../../../services/books');
 // Inicializadores
 const router = express.Router();
 
+// Middlewares
+const securedRoute = require('./../../middlewares/security/securedRoute');
+
 // Rutas
 router.route('/')
     // NUEVO LIBRO
-    .post((req, res, next)=>{
+    .post(securedRoute, (req, res, next)=>{
         const name = req.body.name;
         const author = req.body.author;
 
