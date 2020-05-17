@@ -56,7 +56,7 @@ Solo se deben implementar las rutas especificadas a continuación:
 - ### Users
 
 | Endpoint | Método | URL | Descrpción |
-| - | - | - |
+| - | - | - | - | 
 | /users | GET | http://localhost/api/users | Listar usuarios (id, name, username) |
 
 ## Archivos:
