@@ -10,18 +10,18 @@ Solo se deben implementar las rutas especificadas a continuación:
 
 - ### Books
 
-| Ruta | Método | Descripción |
-| - | - | - |
-| / | GET | Listar libros |
-| /books | POST | Nuevo libro\* (id auto-generado, name, author) |
-|/books/:id | GET | Mostrar libro por id |
+| Endpoint | Método | URL| Descripción |
+| - | - | - | - |
+| / | GET | http://localhost/api | Listar libros |
+| /books | POST | http://localhost/api/books | Nuevo libro\* (id auto-generado, name, author) |
+|/books/:id | GET | http://localhost/api/books/:id | Mostrar libro por id |
 
 - ### Users
 
-| Ruta | Método | Descripción |
+| Endpoint | Método | URL | Descripción |
 | - | - | - |
-| /users | POST | Nuevo usuario (id auto-generado, name, username, password-hash) |
-| /users/login | POST | Login usuario |
+| /users | POST | http://localhost/api/users | Nuevo usuario (id auto-generado, name, username, password-hash) |
+| /users/login | POST | http://localhost/api/users/login | Login usuario |
 
 \*Indica si la ruta es privada (Header: x-auth)
 
@@ -34,6 +34,6 @@ Solo se deben implementar las rutas especificadas a continuación:
 
 - ### Users
 
-| Ruta | Método | Descrpción |
+| Endpoint | Método | URL | Descrpción |
 | - | - | - |
-| /users | GET | Listar usuarios (id, name, username) |
+| /users | GET | http://localhost/api/users | Listar usuarios (id, name, username) |
