@@ -22,13 +22,17 @@ let users = [];
 
 // Listar usuarios (id, username, name)
 const listUsers = () => {
-    return users.map(user => {
+    return {
+        est: 1,
+        msg: `Lista de usuarios`,
+        users: users.map(user => {
         return {
             id: user.id,
             username: user.username,
             name: user.name
         };
-    });
+    })
+    };
 };
 
 /* Crear usuario

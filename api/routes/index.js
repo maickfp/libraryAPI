@@ -13,8 +13,12 @@ const router = express.Router();
 
 // Rutas
 router.route('/')
+    // LISTAR LIBROS
     .get((req, res, next)=>{
-        res.status(200).send(bookService.listBooks());
+        const resp = bookService.listBooks();
+        res.locals.resp = resp;
+        res.status(200).send(resp);
+        next();
     });
 
 module.exports = router;

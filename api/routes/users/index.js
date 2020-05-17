@@ -14,8 +14,11 @@ const router = express.Router();
 // Rutas
 router.route('/')
     // LISTAR USUARIOS
-    .get((req, res, nex)=>{
-        res.status(200).send(userService.listUsers());
+    .get((req, res, next)=>{
+        const resp = userService.listUsers();
+        res.locals.resp = resp;
+        res.status(200).send(resp);
+        next();
     })
     // CREAR USUARIO
     .post((req, res, next)=>{
@@ -24,20 +27,10 @@ router.route('/')
         const password = req.body.password;
         
         const resp = userService.createUser(name, username, password);
-
-        switch(resp.est){
-            case 1:
-                log.info(resp.msg, username, req.originalUrl);
-                break;
-            case 2:
-            case 3:
-                log.error(resp.msg, username, req.originalUrl);
-                break;
-            case 4:
-                log.warn(resp.msg, username, req.originalUrl);
-        }
+        res.locals.resp = resp;
 
         res.status(200).send(resp);
+        next();
     });
 
 router.route('/login')
@@ -47,20 +40,10 @@ router.route('/login')
         const password = req.body.password;
         
         const resp = userService.login(username, password);
-
-        switch(resp.est){
-            case 1:
-                log.info(resp.msg, username, req.originalUrl);
-                break;
-            case 2:
-            case 3:
-                log.error(resp.msg, username, req.originalUrl);
-                break;
-            case 4:
-                log.warn(resp.msg, username, req.originalUrl);
-        }
+        res.locals.resp = resp;
 
         res.status(200).send(resp);
+        next();
     });
 
 module.exports = router;

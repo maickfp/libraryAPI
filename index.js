@@ -28,5 +28,5 @@ app.use('/api', api);
 // Iniciar servidor
 app.listen(config.port, ()=>{
     beforeStart();
-    log.info(`Servidio iniciado en puerto ${config.port}. Acceder a ruta http://localhost${config.port==80?'':`:${config.port}`}/api`);
+    log.info(`Servidio iniciado. Acceder a ruta http://localhost${config.port==80?'':`:${config.port}`}/api`);
 });

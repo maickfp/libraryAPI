@@ -19,20 +19,10 @@ router.route('/')
         const author = req.body.author;
 
         const resp = bookService.createBook(name, author);
-
-        switch(resp.est){
-            case 1:
-                log.info(resp.msg, undefined, req.originalUrl);
-                break;
-            case 2:
-            case 3:
-                log.error(resp.msg, undefined, req.originalUrl);
-                break;
-            case 4:
-                log.warn(resp.msg, undefined, req.originalUrl);
-        }
+        res.locals.resp = resp;
 
         res.status(200).send(resp);
+        next();
     });
 router.route('/:id')
     // MOSTRAR LIBRO POR ID
@@ -40,21 +30,10 @@ router.route('/:id')
         const id = req.params.id;
 
         const resp = bookService.showBook(id);
-
-        switch(resp.est){
-            case 1:
-                log.info(resp.msg, undefined, req.originalUrl);
-                break;
-            case 2:
-            case 3:
-                log.error(resp.msg, undefined, req.originalUrl);
-                break;
-            case 4:
-                log.warn(resp.msg, undefined, req.originalUrl);
-        }
+        res.locals.resp = resp;
 
         res.status(200).send(resp);
-        
+        next();
     });
 
 module.exports = router;

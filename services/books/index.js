@@ -17,7 +17,11 @@ let books = [];
 
 // Listar libros
 const listBooks = () => {
-    return books;
+    return {
+        est: 1,
+        msg: `Lista de libros`,
+        books
+    };
 };
 
 // Crear libro
@@ -78,7 +82,7 @@ const showBook = (id) => {
     return {
         est: 1,
         msg: `Libro encontrado`,
-        book: book
+        book
     }
 
 };
