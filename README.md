@@ -13,9 +13,9 @@ Solo se deben implementar las rutas especificadas a continuación:
 #### Estructura
 ```json
  {
-    id -> text (auto)
-    name -> text
-    author -> text
+    "id": "uuid",
+    "name": "Nombre del libro",
+    "author": "Autor del libro"
  }
 ```
 
@@ -25,6 +25,7 @@ Solo se deben implementar las rutas especificadas a continuación:
 | / | GET | http://localhost/api | Listar libros |
 | /books | POST | http://localhost/api/books | Nuevo libro\* (id auto-generado, name, author) |
 |/books/:id | GET | http://localhost/api/books/:id | Mostrar libro por id |
+
 \*Indica si la ruta es privada (Header: x-auth)
 
 - ### Users
@@ -32,10 +33,10 @@ Solo se deben implementar las rutas especificadas a continuación:
 #### Estructura
 ```json
  {
-    id -> text (auto)
-    username -> text
-    name -> text
-    password -> text (hash)
+    "id": "uuid",
+    "username": "Username del usuario",
+    "name": "Nombre de usuario",
+    "password": "Contraseña (encriptada)"
  }
  ```
 
@@ -44,6 +45,7 @@ Solo se deben implementar las rutas especificadas a continuación:
 | - | - | - | - |
 | /users | POST | http://localhost/api/users | Nuevo usuario (id auto-generado, name, username, password-hash) |
 | /users/login | POST | http://localhost/api/users/login | Login usuario |
+
 \*Indica si la ruta es privada (Header: x-auth)
 
 ## Adicionalmente:
