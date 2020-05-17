@@ -3,8 +3,6 @@
 const express = require('express');
 
 //MODULOS PROPIOS
-// logger
-const log = require('./../../../utils/log');
 // servicio users
 const userService = require('./../../../services/users');
 

@@ -3,8 +3,8 @@
 const express = require('express');
 
 //MODULOS PROPIOS
-// logger
-const log = require('./../../../utils/log');
+// importar log de accesso
+const accessLog = require('./../../../utils/log/access');
 // servicio book
 const bookService = require('./../../../services/books');
 
@@ -17,7 +17,7 @@ const securedRoute = require('./../../middlewares/security/securedRoute');
 // Rutas
 router.route('/')
     // NUEVO LIBRO
-    .post(securedRoute, (req, res, next)=>{
+    .post(accessLog, securedRoute, (req, res, next)=>{
         const name = req.body.name;
         const author = req.body.author;
 
@@ -29,7 +29,7 @@ router.route('/')
     });
 router.route('/:id')
     // MOSTRAR LIBRO POR ID
-    .get((req, res, next)=>{
+    .get(accessLog, (req, res, next)=>{
         const id = req.params.id;
 
         const resp = bookService.showBook(id);

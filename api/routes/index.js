@@ -3,8 +3,8 @@
 const express = require('express');
 
 //MODULOS PROPIOS
-// logger
-const log = require('./../../utils/log');
+// importar log de accesso
+const accessLog = require('./../../utils/log/access');
 // servicio users
 const bookService = require('./../../services/books');
 
@@ -14,7 +14,7 @@ const router = express.Router();
 // Rutas
 router.route('/')
     // LISTAR LIBROS
-    .get((req, res, next)=>{
+    .get(accessLog, (req, res, next)=>{
         const resp = bookService.listBooks();
         res.locals.resp = resp;
         res.status(200).send(resp);
