@@ -41,7 +41,7 @@ Solo se deben implementar las rutas especificadas a continuación:
 
 #### Rutas
 | Endpoint | Método | URL | Descripción |
-| - | - | - |
+| - | - | - | - |
 | /users | POST | http://localhost/api/users | Nuevo usuario (id auto-generado, name, username, password-hash) |
 | /users/login | POST | http://localhost/api/users/login | Login usuario |
 \*Indica si la ruta es privada (Header: x-auth)
