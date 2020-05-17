@@ -7,8 +7,12 @@ const fs = require("fs");
 const log = require('./../utils/log');
 // servicio users
 const userService = require('./../services/users');
+// servicio users
+const bookService = require('./../services/books');
 
-const beforeStart = () => {
+// Procedimientos
+// Cargar usuarios
+function loadUsers(){
     fs.readFile('./files/users.json', "utf8", (err, data) => {
     
         if(err){
@@ -22,6 +26,27 @@ const beforeStart = () => {
         });
         
     });
+}
+// Cargar libros
+function loadBooks(){
+    fs.readFile('./files/books.json', "utf8", (err, data) => {
+    
+        if(err){
+            log.error(`Error cargando libros: ${err}`);
+            return;
+        }
+    
+        const booksList = JSON.parse(data);
+        booksList.forEach(book=>{
+            bookService.createBook(book.name, book.author);
+        });
+        
+    });
+}
+
+const beforeStart = () => {
+    loadUsers();
+    loadBooks();
 };
 
 module.exports = beforeStart;
