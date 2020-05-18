@@ -4,11 +4,11 @@ const fs = require("fs");
 
 // MODULOS PROPIOS
 // logger
-const log = require('./../utils/log');
+const log = require('./../api/utils/log');
 // servicio users
-const userService = require('./../services/users');
+const userService = require('./../api/services/users');
 // servicio users
-const bookService = require('./../services/books');
+const bookService = require('./../api/services/books');
 
 // Procedimientos
 // Cargar usuarios

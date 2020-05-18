@@ -2,7 +2,7 @@
 // importar config
 const config = require('./../../../config');
 // importar security
-const security = require('./../../../utils/security');
+const security = require('./../../utils/security');
 
 const defaultUser = (req, res, next) => {
     const token = req.header("x-auth");

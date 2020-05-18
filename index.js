@@ -10,7 +10,7 @@ const beforeStart = require('./config/beforeStart');
 // importar configuracion
 const config = require('./config');
 // importar logger propio
-const log = require('./utils/log');
+const log = require('./api/utils/log');
 // importar api
 const api = require('./api');
 

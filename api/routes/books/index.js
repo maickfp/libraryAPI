@@ -4,9 +4,9 @@ const express = require('express');
 
 //MODULOS PROPIOS
 // importar log de accesso
-const accessLog = require('./../../../utils/log/access');
+const accessLog = require('./../../utils/log/access');
 // servicio book
-const bookService = require('./../../../services/books');
+const bookService = require('./../../services/books');
 
 // Inicializadores
 const router = express.Router();

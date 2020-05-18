@@ -1,6 +1,6 @@
 // MODULOS PROPIOS
 // importar logger
-const log = require('./../../../utils/log');
+const log = require('./../../utils/log');
 
 const response = (req, res, next) => {
 

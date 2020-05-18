@@ -1,7 +1,3 @@
-// MODULOS PROPIOS
-// importar security
-const security = require('./../../../utils/security');
-
 const securedRoute = (req, res, next) => {
     if(req.user.id !== undefined){
         next();

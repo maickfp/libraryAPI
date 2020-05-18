@@ -6,7 +6,7 @@ const jwt = require('jsonwebtoken');
 
 // MODULOS PROPRIOS
 // importar configuracion
-const config = require('./../../config');
+const config = require('./../../../config');
 // importar log
 const log = require('./../log');
 
